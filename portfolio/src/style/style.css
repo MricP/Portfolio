@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+/*Style générale*/
+body{
+    background-color: #0d0d26;
+    color: #f0f0f0;
+    font-family: 'Josefin',sans-serif;
+    font-size: 1em;
+}
+
+.Titre{
+    font-weight: 700;
+}
+
+/*Nav bar style*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    list-style: none;
+}
+
+.ChoixMenu:hover{
+    border-bottom: solid 2px #ff3300;
+    padding-bottom: 0.5em;
+}
