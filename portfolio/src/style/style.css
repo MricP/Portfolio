@@ -7,8 +7,10 @@ body{
     font-size: 1em;
 }
 
-.Titre{
+li.Titre {
     font-weight: 700;
+    text-align: left;
+    margin-right: 50vw;
 }
 
 /*Nav bar style*/
@@ -22,6 +24,9 @@ li{
     list-style: none;
 }
 
+.ChoixMenu{
+    text-align: center;
+}
 .ChoixMenu:hover{
     border-bottom: solid 2px #ff3300;
     padding-bottom: 0.5em;
