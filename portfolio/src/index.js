@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import NavBar from './Component/Navbar';
+import Navbar from './Component/Navbar.jsx';
+import './style/style.css'
+import videoSrc from './style/video/galaxy.mp4';
+import imgSrc from './style/img/moi2.jpg'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavBar/>
+    <Navbar/> 
+    <video autoPlay loop muted className="videoBackground">
+        <source src={videoSrc} type="video/mp4" />
+    </video>
+    <div className='presentationContainer'>
+      <div className='imageContainer'>
+        <img className='imagePresentationAccueil' alt='moi' src={imgSrc}/>
+      </div>
+      <div className='textPresentationContainer'>
+        <p className='TitreAccueil'>EMRIC PIRRERA</p>
+        <p className='ProfessionAccueil'>Computer Science Student</p>
+      </div>
+    </div>
+    
+    
   </React.StrictMode>
 );
 

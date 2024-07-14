@@ -1,27 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 /*Style générale*/
+
+
 body{
-    background-color: #0d0d26;
+    background-color: #262635;
     color: #f0f0f0;
     font-family: 'Josefin',sans-serif;
     font-size: 1em;
+    margin: 0;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #f0f0f0;
 }
 
 li.Titre {
     font-weight: 700;
     text-align: left;
-    margin-right: 50vw;
+    padding-right: 50vw;
 }
 
 /*Nav bar style*/
 
-nav{
+nav {
     display: flex;
-    flex-direction: row;
+    padding-bottom: 1em;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: 5vh;
+    gap: 15px;
 }
 
 li{
     list-style: none;
+    padding-bottom: 0.5em;
 }
 
 .ChoixMenu{
@@ -29,5 +44,65 @@ li{
 }
 .ChoixMenu:hover{
     border-bottom: solid 2px #ff3300;
-    padding-bottom: 0.5em;
 }
+
+/*Style de la video*/
+.content{
+    position: relative;
+    z-index: 1; 
+}
+
+.videoBackground{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Assurez-vous que la vidéo est derrière le contenu */
+      
+}
+
+/*Style image d'accueil*/
+
+.imageContainer {
+    position: relative;
+    width: 20vw;    
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
+.imagePresentationAccueil {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+/*Style texte Page d'Accueil*/
+
+.presentationContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 40vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    gap: 10em;
+}
+.textPresentationContainer{
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+}
+
+.TitreAccueil{
+    font-weight: 900;
+    font-size: 4em;
+}
+.ProfessionAccueil{
+    font-weight: 400;
+    font-size: 3em;
+}
+    
