@@ -4,12 +4,12 @@ import React from 'react';
 function NavBar(){
     return(
         <div className='content'>
-            <nav>
+            <nav className='navbar'>
             <ul>
                 <li className='Titre'>EMRIC PIRRERA</li>
             </ul>
             <ul>
-                <li className='ChoixMenu'><a  href='#'>About</a></li>
+                <li className='ChoixMenu'><a  href='#'>About Me</a></li>
             </ul>
             <ul>
                 <li className='ChoixMenu'><a href='#'>Projects</a></li>

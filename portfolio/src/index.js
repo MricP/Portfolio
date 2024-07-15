@@ -4,7 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import Navbar from './Component/Navbar.jsx';
 import './style/style.css'
 import videoSrc from './style/video/galaxy.mp4';
-import imgSrc from './style/img/moi2.jpg'
+import imgSrc from './style/img/moi3.png'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +15,7 @@ root.render(
     </video>
     <div className='presentationContainer'>
       <div className='imageContainer'>
+        <div className='imageBackground'></div>
         <img className='imagePresentationAccueil' alt='moi' src={imgSrc}/>
       </div>
       <div className='textPresentationContainer'>
