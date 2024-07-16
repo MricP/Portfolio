@@ -9,7 +9,7 @@ function NavBar(){
                 <li className='Titre'>EMRIC PIRRERA</li>
             </ul>
             <ul>
-                <li className='ChoixMenu'><a  href='#'>About Me</a></li>
+                <li className='ChoixMenu'><a  href='#About'>About Me</a></li>
             </ul>
             <ul>
                 <li className='ChoixMenu'><a href='#'>Projects</a></li>
