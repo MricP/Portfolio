@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import HomeView from './views/HomeView.vue';
+
 
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     
-  </header>
+  </header> -->
 
   <main>
-    <p>Salut les amis c'est Emric Pirrera</p>
+    <HomeView></HomeView>
   </main>
 </template>
 
