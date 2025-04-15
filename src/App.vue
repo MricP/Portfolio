@@ -9,10 +9,11 @@ import HomeView from './views/HomeView.vue';
     
   </header> -->
 
-  <main>
+  <main class="font-fam">
     <HomeView></HomeView>
   </main>
 </template>
 
 <style scoped>
+
 </style>
