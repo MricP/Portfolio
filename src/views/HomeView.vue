@@ -1,15 +1,18 @@
 <script setup lang="ts">
+import ProjectContainer from '../components/ProjectContainer.vue';
+
 
 </script>
 
 <template>
     <main>
         <div class="flex justify-center gap-15 m-35">
-            <div class="w-125 h-90 bg-stone-400"></div>
+            <div class="w-125 h-90 bg-[#D9D9D9] inset-shadow-sm inset-shadow-[#00000025]"></div>
             <div class="flex flex-col space-y-20 gap-5 items-left w-125 h-90">
                 <div class="flex flex-col space-y-5 items-left">
-                    <h1 class="text-5xl bg-gradient-to-r from-[#A9A9FF] to-[#D9D9D9] bg-clip-text text-transparent inner-shadow">Emric Pirrera</h1>
-                    <h2 class="text-2xl bg-gradient-to-r from-[#D9D9D9] to-[#A9A9FF] bg-clip-text text-transparent inner-shadow">Software Developper</h2>
+                    <h1 class="text-5xl bg-gradient-to-r from-[#A9A9FF] to-[#D9D9D9] bg-clip-text text-transparent shadow-inner-text">Emric Pirrera</h1>
+                    <h2 class="text-2xl text-transparent bg-gradient-to-r from-[#D9D9D9] to-[#A9A9FF] bg-clip-text [filter:drop-shadow(1px_1px_1px_rgba(0,0,0,0.3))]">Software Developer</h2>
+
                     <p>Tout ce que vous pouvez imaginer est probablement faisable, il vous suffit de l'imaginer et d'y travailler. (Larry Page)</p>
 
                 </div>
@@ -19,13 +22,16 @@
                 </div>
             </div>
         </div>
-        
+        <!-- Project section -->
+
+        <h3>Projets</h3>
+        <ProjectContainer></ProjectContainer>
     </main>
 </template>
 <style scoped>
     @import "tailwindcss";
 
-    .inner-shadow {
+    .inner-text-shadow {
         text-shadow: inset 1px 1px 2px rgba(1, 1, 1, 0.5);
   }
 </style>
