@@ -23,8 +23,8 @@ import ProjectContainer from '../components/ProjectContainer.vue';
             </div>
         </div>
         <!-- Project section -->
-        <div class="mt-50 flex flex-col justify-center items-center gap-10">
-            <h3 class="font-bold text-lg text-left w-100%">Projets</h3>
+        <h3 class="mt-50 ml-50 mb-10 font-bold text-xl text-left w-100%">Projets</h3>
+        <div class="flex flex-col justify-center items-center gap-10">
             <div class="flex flex-col ">
                 <div class="flex flex-row gap-25 ">
                     <ProjectContainer></ProjectContainer>
