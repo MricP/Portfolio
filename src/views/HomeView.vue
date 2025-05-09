@@ -5,8 +5,8 @@ import ProjectContainer from '../components/ProjectContainer.vue';
 </script>
 
 <template>
-    <main class="w-100%">
-        <div class="flex flex-col md:flex-row justify-center mt-35 ml-4 sm:mt-15 sm:ml-5sm:mr-5 md:ml-6 gap-4">
+    <main class="w-100% mt-40">
+        <div class="flex flex-col md:flex-row justify-center mt-35 ml-4 sm:mt-15 sm:ml-5 sm:mr-5 md:ml-6 gap-4">
             <div class="w-full sm:w-1/2 lg:w-[500px] h-90 bg-[#D9D9D9] shadow-inner"></div>        
                 <div class="flex flex-col space-y-20 gap-5 items-left lg:md:w-100% w-90">
                 <div class="flex flex-col space-y-5 items-left lg:md:w-100% w-90 ">
@@ -23,9 +23,21 @@ import ProjectContainer from '../components/ProjectContainer.vue';
             </div>
         </div>
         <!-- Project section -->
-
-        <h3>Projets</h3>
-        <ProjectContainer></ProjectContainer>
+        <div class="mt-50 flex flex-col justify-center items-center gap-10">
+            <h3 class="font-bold text-lg text-left w-100%">Projets</h3>
+            <div class="flex flex-col ">
+                <div class="flex flex-row gap-25 ">
+                    <ProjectContainer></ProjectContainer>
+                    <ProjectContainer class="mt-50"></ProjectContainer>
+                </div>
+                <div class="flex flex-row gap-25 ">
+                    <ProjectContainer></ProjectContainer>
+                    <ProjectContainer class="mt-50"></ProjectContainer>
+                </div>
+            </div>
+            
+        </div>
+        
     </main>
 </template>
 <style scoped>
