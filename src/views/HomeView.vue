@@ -23,7 +23,7 @@ import ProjectContainer from '../components/ProjectContainer.vue';
             </div>
         </div>
         <!-- Project section -->
-        <h3 class="mt-50 ml-50 mb-10 font-bold text-xl text-left w-100%">Projets</h3>
+        <h3 class="mt-50 ml-50 mb-10 font-bold text-xl text-left w-100%">PROJETS</h3>
         <div class="flex flex-col justify-center items-center gap-10">
             <div class="flex flex-col ">
                 <div class="flex flex-row gap-25 ">
@@ -35,8 +35,8 @@ import ProjectContainer from '../components/ProjectContainer.vue';
                     <ProjectContainer class="mt-50"></ProjectContainer>
                 </div>
             </div>
-            
         </div>
+        <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%">EXPERIENCES</h3>
         
     </main>
 </template>
