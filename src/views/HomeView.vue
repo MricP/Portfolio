@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import ProjectContainer from '../components/ProjectContainer.vue';
+import Experience from '../components/Experience.vue';
+import TechnologieCarousel from '../components/TechnologieCarousel.vue';
 
 
 </script>
@@ -37,6 +39,17 @@ import ProjectContainer from '../components/ProjectContainer.vue';
             </div>
         </div>
         <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%">EXPERIENCES</h3>
+        <div class="flex flex-col justify-center items-center">
+            <Experience class="mb-10"></Experience>
+            <div class="bg-[#D9D9D9] h-1 w-60/100"></div>
+        </div>
+
+        <!-- Technoligies part -->
+        <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%">TECHNOLOGIES</h3>
+        <div class="flex flex-col justify-center items-center">
+            <TechnologieCarousel></TechnologieCarousel>
+        </div>
+        
         
     </main>
 </template>
