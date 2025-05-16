@@ -20,8 +20,14 @@ onMounted(() => {
       const boxWidth = boxDefilement.offsetWidth;
 
       if (dernier.getBoundingClientRect().left >= boxWidth + boxDefilement.getBoundingClientRect().left) {
+       dernier.style.opacity = "0";
         boxDefilement.insertBefore(dernier, boxDefilement.firstElementChild);
         offset -= dernier.offsetWidth;
+
+        void dernier.offsetHeight;
+
+        dernier.style.transition = "opacity 0.8s ease";
+        dernier.style.opacity = "1";
       }
 
     }, 60);
@@ -34,7 +40,7 @@ onMounted(() => {
         <div class="flex flex-col justify-center items-center">
           <div class="defile flex flex-row align-center justify-center bg-[#d9d9d950] w-60/100 h-50 overflow-hidden gap-10 ">
               <div class="eltDefile flex flex-col justify-center items-center">
-                <img  src="../assets/images/git.svg" alt="">
+                <img src="../assets/images/git.svg" alt="">
                 <p>GIT</p>
               </div>
               
@@ -44,7 +50,7 @@ onMounted(() => {
               </div>
 
               <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/kotlin.svg" alt="">
+                <img src="../assets/images/kotlin.svg" alt="ss">
                 <p>KOTLIN</p>
               </div>
               
