@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-
+import kotlinIcon from '../assets/images/kotlin.svg';
 onMounted(() => {
   const boxDefilement: HTMLElement | null = document.querySelector(".defile");
   const eltDefile = document.getElementsByClassName("eltDefile");
@@ -26,7 +26,7 @@ onMounted(() => {
 
         void dernier.offsetHeight;
 
-        dernier.style.transition = "opacity 0.8s ease";
+        dernier.style.transition = "opacity 1.5s ease";
         dernier.style.opacity = "1";
       }
 
@@ -50,7 +50,7 @@ onMounted(() => {
               </div>
 
               <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/kotlin.svg" alt="ss">
+                <img :src="kotlinIcon" alt="">
                 <p>KOTLIN</p>
               </div>
               
