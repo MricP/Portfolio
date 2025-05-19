@@ -5,7 +5,7 @@ import TechnologieCarousel from '../components/TechnologieCarousel.vue';
 import airconcess from '../assets/images/project/airconcess.png'
 import tvshelf from '../assets/images/project/tvshelf.png'
 import finanzen from '../assets/images/project/finanzen.png'
-import flightcheck from '../assets/images/project/flightcheck.png'
+// import flightcheck from '../assets/images/project/flightcheck.png'
 
 
 const tabAirconcess : string[] = ["React", "PHP"]
