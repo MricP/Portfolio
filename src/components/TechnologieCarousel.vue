@@ -1,84 +1,125 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, onBeforeUnmount, ref } from "vue";
+import gitIcon from '../assets/images/git.svg';
+import javaIcon from '../assets/images/java.svg';
 import kotlinIcon from '../assets/images/kotlin.svg';
+import phpIcon from '../assets/images/php.svg';
+import vueIcon from '../assets/images/vue.svg';
+import reactIcon from '../assets/images/reactIcon.svg';
+import tailwindIcon from '../assets/images/tailwind.svg';
+import windevIcon from '../assets/images/windev.png';
+
+const techs = [
+  { icon: gitIcon, label: "GIT" },
+  { icon: javaIcon, label: "JAVA" },
+  { icon: kotlinIcon, label: "KOTLIN" },
+  { icon: phpIcon, label: "PHP" },
+  { icon: vueIcon, label: "VUE JS" },
+  { icon: reactIcon, label: "REACT" },
+  { icon: tailwindIcon, label: "TAILWIND" },
+  { icon: windevIcon, label: "WINDEV" },
+  { icon: gitIcon, label: "GIT" },
+  { icon: javaIcon, label: "JAVA" },
+  { icon: kotlinIcon, label: "KOTLIN" },
+  { icon: phpIcon, label: "PHP" },
+  { icon: vueIcon, label: "VUE JS" },
+  { icon: reactIcon, label: "REACT" },
+  { icon: tailwindIcon, label: "TAILWIND" },
+  { icon: windevIcon, label: "WINDEV" },
+];
+
+const groupRef = ref<HTMLElement | null>(null);
+let animationFrameId: number;
+let posX = 0;
+let contentWidth = 0; 
+
+const speed = 1.5;
+
+function animate() {
+  const group = groupRef.value;
+  if (!group) return;
+
+  posX -= speed;
+
+  if (Math.abs(posX) >= contentWidth) {
+  posX = 0;
+}
+
+  group.style.transform = `translateX(${posX}px)`;
+  animationFrameId = requestAnimationFrame(animate);
+}
+
+function startAnimation() {
+  if (!animationFrameId) {
+    animationFrameId = requestAnimationFrame(animate);
+  }
+}
+
+function stopAnimation() {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = 0;
+  }
+}
+
 onMounted(() => {
-  const boxDefilement: HTMLElement | null = document.querySelector(".defile");
-  const eltDefile = document.getElementsByClassName("eltDefile");
+  const group = groupRef.value;
+  if (!group) return;
 
-  if (boxDefilement && eltDefile.length > 0) {
-    let offset = 0;
+  contentWidth = 0;
+  Array.from(group.children).forEach(child => {
+    contentWidth += (child as HTMLElement).offsetWidth + 12; // +12 c’est le gap entre éléments (gap-12)
+  });
 
-    setInterval(() => {
-      offset += 2;
+  const children = Array.from(group.children);
+  children.forEach(child => {
+    const clone = child.cloneNode(true);
+    group.appendChild(clone);
+  });
 
-      for (let i = 0; i < eltDefile.length; i++) {
-        const elt = eltDefile[i] as HTMLElement;
-        elt.style.transform = `translateX(${offset}px)`;
-      }
-
-      const dernier = boxDefilement.lastElementChild as HTMLElement;
-      const boxWidth = boxDefilement.offsetWidth;
-
-      if (dernier.getBoundingClientRect().left >= boxWidth + boxDefilement.getBoundingClientRect().left) {
-       dernier.style.opacity = "0";
-        boxDefilement.insertBefore(dernier, boxDefilement.firstElementChild);
-        offset -= dernier.offsetWidth;
-
-        void dernier.offsetHeight;
-
-        dernier.style.transition = "opacity 1.5s ease";
-        dernier.style.opacity = "1";
-      }
-
-    }, 60);
-  }  
+  startAnimation();
 });
 
+onBeforeUnmount(() => {
+  stopAnimation();
+});
 </script>
+
 <template>
-    <main>
-        <div class="flex flex-col justify-center items-center">
-          <div class="defile flex flex-row align-center justify-center bg-[#d9d9d950] w-60/100 h-50 overflow-hidden gap-10 ">
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/git.svg" alt="">
-                <p>GIT</p>
-              </div>
-              
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/java.svg" alt="">
-                <p>JAVA</p>
-              </div>
-
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img :src="kotlinIcon" alt="">
-                <p>KOTLIN</p>
-              </div>
-              
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/php.svg" alt="">
-                <p class="text-[#F3F3F3]">S</p>
-              </div>
-
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/vue.svg" alt="">
-                <p>VUE JS</p>
-              </div>
-
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img src="../assets/images/reactIcon.svg" alt="">
-                <p>REACT</p>
-              </div>
-
-              <div class="eltDefile flex flex-col justify-center items-center ">
-                <img src="../assets/images/tailwind.svg" alt="">
-                <p>TAILWIND</p>
-              </div>
-
-              <div class="eltDefile flex flex-col justify-center items-center">
-                <img class="h-22 w-auto object-contain" src="../assets/images/windev.png" alt="">
-                <p>WINDEV</p>
-              </div>
-          </div>
+  <main class="flex items-center justify-center">
+    <div class="defile overflow-hidden w-250 bg-[#d9d9d950] py-6" @mouseenter="stopAnimation" @mouseleave="startAnimation">
+      <div ref="groupRef" class="group flex gap-12 items-center whitespace-nowrap">
+        <div
+          v-for="(tech, index) in techs"
+          :key="index"
+          class="elt flex flex-col items-center min-w-[150px]"
+        >
+          <img :src="tech.icon" alt="" class="h-12 mb-1" />
+          <p>{{ tech.label }}</p>
         </div>
-    </main>
+      </div>
+    </div>
+  </main>
 </template>
+
+<style scoped>
+.defile {
+  overflow: hidden;
+  position: relative;
+}
+
+.group {
+  display: flex;
+  width: fit-content;
+  will-change: transform;
+}
+
+.elt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  margin: 0 20px;
+}
+</style>
