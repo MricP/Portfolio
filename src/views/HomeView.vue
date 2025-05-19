@@ -2,6 +2,16 @@
 import ProjectContainer from '../components/ProjectContainer.vue';
 import Experience from '../components/Experience.vue';
 import TechnologieCarousel from '../components/TechnologieCarousel.vue';
+import airconcess from '../assets/images/project/airconcess.png'
+import tvshelf from '../assets/images/project/tvshelf.png'
+import finanzen from '../assets/images/project/finanzen.png'
+import flightcheck from '../assets/images/project/flightcheck.png'
+
+
+const tabAirconcess : string[] = ["React", "PHP"]
+const tabTvshelf : string[] = ["Kotlin"]
+const tabFinanzen : string[] = ["Symfony"]
+const tabFlightCheck : string[] = ["Java"]
 
 
 </script>
@@ -29,12 +39,12 @@ import TechnologieCarousel from '../components/TechnologieCarousel.vue';
         <div class="flex flex-col justify-center items-center gap-10">
             <div class="flex flex-col ">
                 <div class="flex flex-row gap-25 ">
-                    <ProjectContainer></ProjectContainer>
-                    <ProjectContainer class="mt-50"></ProjectContainer>
+                    <ProjectContainer title="AirConcess" subtitle="Concessionaire d'aéronefs en ligne." :image="airconcess" :technos="tabAirconcess"></ProjectContainer>
+                    <ProjectContainer title="TVShelf" subtitle="Application mobile permettant de suivre les séries que vous avec regardé"  :image="tvshelf" :technos="tabTvshelf" class="mt-50"></ProjectContainer>
                 </div>
                 <div class="flex flex-row gap-25 ">
-                    <ProjectContainer></ProjectContainer>
-                    <ProjectContainer class="mt-50"></ProjectContainer>
+                    <ProjectContainer title="Finanzen" subtitle="Application web permettant de gérer vos finances de façon zen" :image="finanzen" :technos="tabFinanzen"></ProjectContainer>
+                    <ProjectContainer title="FlightCheck" subtitle="Logiciel permettant de gérer et réguler le trafic aérien" image="../assets/project/airconcess.png" :technos="tabFlightCheck" class="mt-50"></ProjectContainer>
                 </div>
             </div>
         </div>
