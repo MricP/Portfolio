@@ -17,7 +17,7 @@ const tabFlightCheck : string[] = ["Java"]
 </script>
 
 <template>
-    <main class="w-100% mt-40">
+    <main class="w-100% mt-40" id="accueil">
         <div class="flex flex-col md:flex-row justify-center mt-35 ml-4 sm:mt-15 sm:ml-5 sm:mr-5 md:ml-6 gap-4">
             <div class="w-full sm:w-1/2 lg:w-[500px] h-90 bg-[#D9D9D9] shadow-inner"></div>        
                 <div class="flex flex-col space-y-20 gap-5 items-left lg:md:w-100% w-90">
@@ -35,7 +35,7 @@ const tabFlightCheck : string[] = ["Java"]
             </div>
         </div>
         <!-- Project section -->
-        <h3 class="mt-50 ml-50 mb-10 font-bold text-xl text-left w-100%">PROJETS</h3>
+        <h3 class="mt-50 ml-50 mb-10 font-bold text-xl text-left w-100%" id="projets">PROJETS</h3>
         <div class="flex flex-col justify-center items-center gap-10">
             <div class="flex flex-col ">
                 <div class="flex flex-row gap-25 ">
@@ -48,14 +48,14 @@ const tabFlightCheck : string[] = ["Java"]
                 </div>
             </div>
         </div>
-        <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%">EXPERIENCES</h3>
+        <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%" id="experiences">EXPERIENCES</h3>
         <div class="flex flex-col justify-center items-center">
             <Experience class="mb-10"></Experience>
             <div class="bg-[#D9D9D9] h-1 w-60/100"></div>
         </div>
 
         <!-- Technoligies part -->
-        <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%">TECHNOLOGIES</h3>
+        <h3 class="mt-20 ml-50 mb-10 font-bold text-xl text-left w-100%" id="techno">TECHNOLOGIES</h3>
         <div class="flex flex-col justify-center items-center">
             <TechnologieCarousel></TechnologieCarousel>
         </div>
