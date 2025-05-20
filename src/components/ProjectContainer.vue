@@ -9,18 +9,20 @@ const props = defineProps<{
 
 </script>
 <template>
-    <div class="card w-80 h-100 bg-[#d9d9d950] rounded-xl border-1 border-[#d9d9d9] flex flex-col justify-center items-center gap-5 hover:rotate-15 transition-transform duration-300 ">
-        <div class="bg-cover bg-center w-60 h-40 rounded-xl" :style="`background-image: url('${props.image}')`"></div>
-        <div>
-            <h2 class="font-bold">{{ props.title }}</h2>
-            <p class="w-60">{{props.subtitle}}</p>
+    <router-link :to="{ name: 'ProjectView', params: { name: title } }">
+        <div class="card w-80 h-100 bg-[#d9d9d950] rounded-xl border-1 border-[#d9d9d9] flex flex-col justify-center items-center gap-5 hover:rotate-15 transition-transform duration-300 ">
+            <div class="bg-cover bg-center w-60 h-40 rounded-xl" :style="`background-image: url('${props.image}')`"></div>
+            <div>
+                <h2 class="font-bold">{{ props.title }}</h2>
+                <p class="w-60">{{props.subtitle}}</p>
+            </div>
+            <div class="w-35 h-6 bg-[#A9A9FF] rounded-md flex flex-row justify-center items-center gap-2">
+              <div class="flex flex-row gap-2" v-for="techno in props.technos">
+                <p class="text-white font-bold">{{techno}}</p>
+              </div>
+            </div>
         </div>
-        <div class="w-35 h-6 bg-[#A9A9FF] rounded-md flex flex-row justify-center items-center gap-2">
-          <div class="flex flex-row gap-2" v-for="techno in props.technos">
-            <p class="text-white font-bold">{{techno}}</p>
-          </div>
-        </div>
-    </div>
+      </router-link>
 </template>
 
 <style scoped>

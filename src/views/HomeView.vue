@@ -17,7 +17,7 @@ const tabFlightCheck : string[] = ["Java"]
 </script>
 
 <template>
-    <main class="w-100% mt-40" id="accueil">
+    <main class="w-100% mt-40">
         <div class="flex flex-col md:flex-row justify-center mt-35 ml-4 sm:mt-15 sm:ml-5 sm:mr-5 md:ml-6 gap-4">
             <div class="w-full sm:w-1/2 lg:w-[500px] h-90 bg-[#D9D9D9] shadow-inner"></div>        
                 <div class="flex flex-col space-y-20 gap-5 items-left lg:md:w-100% w-90">

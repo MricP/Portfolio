@@ -7,15 +7,11 @@ import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
-  <!-- <header>
-    
-  </header> -->
-
-  <main class="font-fam">
-    <NavBar class="absolute top-15 left-15"></NavBar>
-    <HomeView></HomeView>
-    <Footer></Footer>
-  </main>
+  <div class="font-fam">
+    <NavBar class="absolute top-15 left-15" />
+    <RouterView />
+    <Footer />
+  </div>
 </template>
 
 <style scoped>
