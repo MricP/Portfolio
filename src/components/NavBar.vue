@@ -37,7 +37,7 @@
                 <div class="h-0.5 bg-[#505050] rounded"></div>
             </div>
             <div class="popup flex flex-col items-left gap-5 justify-center mt-5 text-3xl p-5">
-                <a class="hover:text-4xl ease-in-out duration-300" href="" @click.prevent="() => scrolltoElement('accueil')">ACCUEIL</a>
+                <a class="hover:text-4xl ease-in-out duration-300" href="#" @click.prevent="() => scrolltoElement('accueil')">ACCUEIL</a>
                 <a class="hover:text-4xl ease-in-out duration-300" href="" @click.prevent="() => scrolltoElement('projets')">PROJETS</a>
                 <a class="hover:text-4xl ease-in-out duration-300" @click.prevent="() => scrolltoElement('experiences')">EXPERIENCES</a>
                 <a class="hover:text-4xl ease-in-out duration-300" @click.prevent="() => scrolltoElement('techno')">TECHNOLOGIES</a>
