@@ -4,14 +4,16 @@ const props = defineProps<{
     title: string,
     subtitle : string,
     image : string,
-    technos : string[]
+    technos : string[],
+    brief : string,
+    contribution : string,
+    probleme : string
   }>()
 
 </script>
 <template>
-    <router-link :to="{ name: 'ProjectView', params: { name: title } }">
-        <div class="card w-80 h-100 bg-[#d9d9d950] rounded-xl border-1 border-[#d9d9d9] flex flex-col justify-center items-center gap-5 hover:rotate-15 transition-transform duration-300 ">
-            <div class="bg-cover bg-center w-60 h-40 rounded-xl" :style="`background-image: url('${props.image}')`"></div>
+      <router-link :to="{name: 'ProjectView',params: { name: title },query: {brief: brief,contribution: contribution,probleme: probleme}}">        <div class="card w-80 h-100 bg-[#d9d9d950] rounded-xl border-1 border-[#d9d9d9] flex flex-col justify-center items-center gap-5 hover:rotate-15 transition-transform duration-300 ">
+        <div class="bg-cover bg-center w-60 h-40 rounded-xl" :style="`background-image: url('${props.image}')`"></div>
             <div>
                 <h2 class="font-bold">{{ props.title }}</h2>
                 <p class="w-60">{{props.subtitle}}</p>

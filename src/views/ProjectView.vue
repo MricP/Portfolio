@@ -3,37 +3,44 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const name = route.params.name
+const brief = route.query.brief
+const contribution = route.query.contribution
+const probleme = route.query.probleme
+
+
 </script>
 
 <template>
-  <main class="h-screen flex flex-col items-center justify-center text-center gap-8 ">
-    <div class="absolute top-25 left-100">
-        <p>A</p>
-    </div>
-    <div>
-        <h1 class="inline-block mx-auto text-4xl font-bold bg-gradient-to-r from-[#A9A9FF] to-[#D9D9D9] bg-clip-text text-transparent">{{ name }}</h1>
+  <main class="flex flex-col align-center text-center gap-8">
+    <div class="mt-25 flex flex-col align-center justify-center text-center gap-8">
+        <RouterLink to="/">
+            <div class="absolute top-25 left-100 border-3 border-[#d9d9d9] rounded-3xl " >
+                <img class="h-10 w-10 " src="../assets/images/arrowLeft.svg" alt="">
+            </div>
+        </RouterLink>
         <div>
-            <img src="" alt="Image du projet" class="mx-auto" />
+            <h1 class="inline-block mx-auto text-4xl font-bold bg-gradient-to-r from-[#A9A9FF] to-[#D9D9D9] bg-clip-text text-transparent">{{ name }}</h1>
+
+        </div>
+        <div class="bg-[#d9d9d9] w-60/100 h-75 rounded-xl mx-auto inset-shadow-sm  mb-30">
+        <!-- vidéo -->
+        </div>
+
+        <div class="flex justify-between w-60/100 mx-auto mb-30">
+            <h2 class="text-2xl font-semibold text-left w-1/3">BRIEF</h2>
+            <p class="text-left w-2/3 max-w-xl">{{ brief }}</p>
+        </div>
+
+        <div class="flex justify-between w-60/100 mx-auto  mb-30">
+            <h2 class="text-2xl font-semibold text-left w-1/3">MA CONTRIBUTION</h2>
+            <p class="text-left w-2/3 max-w-xl">{{ contribution }}.</p>
+        </div>
+
+        <div class="flex justify-between w-60/100 mx-auto  mb-30">
+            <h2 class="text-2xl font-semibold text-left w-1/3">PROBLEMES</h2>
+            <p class="text-left w-2/3 max-w-xl">{{ probleme }}</p>
         </div>
     </div>
-
-    <div>
-      <!-- vidéo -->
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold">BRIEF</h2>
-      <p class="max-w-xl ">...</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold">MA CONTRIBUTION</h2>
-      <p class="max-w-xl ">...</p>
-    </div>
-
-    <div>
-      <h2 class="text-2xl font-semibold">PROBLEMES</h2>
-      <p class="max-w-xl"></p>
-    </div>
+    
   </main>
 </template>
