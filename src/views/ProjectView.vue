@@ -6,6 +6,10 @@ const name = route.params.name
 const brief = route.query.brief
 const contribution = route.query.contribution
 const probleme = route.query.probleme
+const video = route.query.video as string
+
+
+
 
 
 </script>
@@ -22,12 +26,9 @@ const probleme = route.query.probleme
             <h1 class="inline-block mx-auto text-4xl font-bold bg-gradient-to-r from-[#A9A9FF] to-[#D9D9D9] bg-clip-text text-transparent">{{ name }}</h1>
 
         </div>
-        <div class="bg-[#d9d9d9] w-[60%] h-[75vh] rounded-xl mx-auto shadow-inner mb-[30px]">
-        <video   autoplay 
-    muted 
-    loop 
-    playsinline  class="w-full h-full object-cover rounded-xl">
-            <source src="../assets/images/project/flightcheck.mp4" type="video/mp4" />
+        <div class="bg-[#ABABFE] w-[60%] h-[75vh] rounded-xl mx-auto shadow-inner mb-[30px]">
+        <video  v-if="video !== undefined"   autoplay muted loop  playsinline  class="w-full h-full  rounded-xl">
+            <source :src="video" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
         </div>
