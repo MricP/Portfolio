@@ -9,7 +9,7 @@ import flightcheck from '../assets/images/project/flightcheck.png'
 
 import flightcheckVideo from '../assets/images/project/flightcheck.mp4'
 import tvshelfVideo from '../assets/images/project/tvshelf.mp4'
-import finanzenVideo from '../assets/images/project/finanzen.mp4'
+//import finanzenVideo from '../assets/images/project/finanzen.mp4'
 import airconcessVideo from '../assets/images/project/airconcess.mp4'
 
 
@@ -59,8 +59,8 @@ const tabFlightCheck : string[] = ["Java"]
                         title="TVShelf" 
                         subtitle="Application mobile permettant de suivre les séries que vous avec regardé"  
                         :image="tvshelf" :technos="tabTvshelf"
-                        :video="flightcheckVideo" 
-                        brief="TVShelf est une application mobile développée en Kotlin qui permet à l’utilisateur de suivre les séries qu’il regarde. Elle propose un moteur de recherche, des suggestions personnalisées, et une organisation visuelle intuitive des séries vues, à voir ou en cours." 
+                        :video="tvshelfVideo" 
+                        brief="TVShelf est une application mobile développée en Kotlin qui permet à l’utilisateur de suivre les séries qu’il regarde. Elle propose un moteur de recherche, la possibilité de noter les séries qu'on a visionné, et une organisation visuelle intuitive des séries vues, à voir ou en cours. Parfait pour préparer une bonne soirée sur son canapé" 
                         contribution="Je me suis occupé de la page d’accueil, avec un affichage clair des dernières séries vues, et de la page de recherche connectée à une API externe. Mon objectif était de rendre l’expérience utilisateur fluide tout en respectant les contraintes d’une application mobile." 
                         probleme="La connexion à Firebase pour l’authentification et le stockage des données a posé plusieurs problèmes. J’ai également rencontré des complications avec l’intégration de l’API TV (format des données, gestion des images) et leur mise en cache." 
                         class="mt-50">
