@@ -22,8 +22,8 @@
 
 <template>
     <div class="z-100">
-        <div class="p-5 bg-[#F0F0F0] shadow-md w-18 rounded-lg fixed absolute" v-show=!isOpen>
-            <div class="w-8 h-6 flex flex-col justify-between cursor-pointer clicked:animate-wiggle" @click=toggleMenu>
+        <div class="p-5 bg-[#F0F0F0] shadow-md w-18 rounded-lg fixed absolute" v-show=!isOpen @click=toggleMenu>
+            <div class="w-8 h-6 flex flex-col justify-between cursor-pointer clicked:animate-wiggle" >
                 <div class="h-0.5 bg-[#505050] rounded"></div> 
                 <div class="h-0.5 bg-[#505050] rounded"></div>
                 <div class="h-0.5 bg-[#505050] rounded"></div>

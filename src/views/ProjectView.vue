@@ -22,8 +22,14 @@ const probleme = route.query.probleme
             <h1 class="inline-block mx-auto text-4xl font-bold bg-gradient-to-r from-[#A9A9FF] to-[#D9D9D9] bg-clip-text text-transparent">{{ name }}</h1>
 
         </div>
-        <div class="bg-[#d9d9d9] w-60/100 h-75 rounded-xl mx-auto inset-shadow-sm  mb-30">
-        <!-- vidéo -->
+        <div class="bg-[#d9d9d9] w-[60%] h-[75vh] rounded-xl mx-auto shadow-inner mb-[30px]">
+        <video   autoplay 
+    muted 
+    loop 
+    playsinline  class="w-full h-full object-cover rounded-xl">
+            <source src="../assets/images/project/flightcheck.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         </div>
 
         <div class="flex justify-between w-60/100 mx-auto mb-30">

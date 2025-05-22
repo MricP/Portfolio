@@ -5,7 +5,7 @@ import TechnologieCarousel from '../components/TechnologieCarousel.vue';
 import airconcess from '../assets/images/project/airconcess.png'
 import tvshelf from '../assets/images/project/tvshelf.png'
 import finanzen from '../assets/images/project/finanzen.png'
-// import flightcheck from '../assets/images/project/flightcheck.png'
+import flightcheck from '../assets/images/project/flightcheck.png'
 
 
 const tabAirconcess : string[] = ["React", "PHP"]
@@ -70,7 +70,7 @@ const tabFlightCheck : string[] = ["Java"]
                     <ProjectContainer 
                         title="FlightCheck"
                         subtitle="Logiciel permettant de gérer et réguler le trafic aérien" 
-                        image="../assets/project/airconcess.png" :technos="tabFlightCheck" 
+                        :image="flightcheck" :technos="tabFlightCheck" 
                         brief="FlightCheck est une application Java conçue pour la régulation du trafic aérien. Elle permet de visualiser en temps réel les vols, détecter les conflits potentiels et proposer des solutions via des algorithmes de graphes. Elle s’adresse à des cas d’usage semi-réels ou pédagogiques." 
                         contribution="Ma contribution principale s’est concentrée sur la partie interface graphique et l’intégration des fonctionnalités de gestion des vols. J’ai également travaillé sur la modélisation de certaines données de trafic, bien que mes souvenirs soient partiels."
                         probleme="L’un des problèmes majeurs a été de comprendre et d’implémenter des algorithmes de graphes complexes, notamment pour la détection de conflits. La mise en place d’un système de coloration pour la résolution visuelle des conflits s’est aussi révélée délicate." 
