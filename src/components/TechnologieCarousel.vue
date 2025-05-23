@@ -87,12 +87,12 @@ onBeforeUnmount(() => {
 
 <template>
   <main class="flex items-center justify-center">
-    <div class="defile overflow-hidden w-250 bg-[#d9d9d950] py-6" @mouseenter="stopAnimation" @mouseleave="startAnimation">
-      <div ref="groupRef" class="group flex gap-12 items-center whitespace-nowrap">
+    <div   class="defile overflow-hidden  w-15/100 bg-[#d9d9d950] py-6" @mouseenter="stopAnimation" @mouseleave="startAnimation">
+      <div ref="groupRef" class="group flex  w-15/100 gap-12 items-center  overflow-hidden whitespace-nowrap  w-90/100 ">
         <div
           v-for="(tech, index) in techs"
           :key="index"
-          class="elt flex flex-col items-center min-w-[150px]"
+          class="elt flex flex-col items-center"
         >
           <img :src="tech.icon" alt="" class="h-12 mb-1" />
           <p>{{ tech.label }}</p>
