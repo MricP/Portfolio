@@ -3,24 +3,16 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const name = route.params.name
-const brief = route.query.brief
-const contribution = route.query.contribution
-const probleme = route.query.probleme
+const id = route.query.id as string
 const video = route.query.video as string
 
 
-
-
-
+import BackButton from '../components/ui/BackButton.vue'
 </script>
 
 <template>
   <main class="flex flex-col align-center text-center gap-8">
-    <RouterLink to="/">
-        <div class="fixed top-25 left-25 z-50 border-3 border-[#d9d9d9] rounded-3xl hidden sm:block lg:top-5 mx-auto" >
-            <img class="h-10 w-10 " src="../assets/images/arrowLeft.svg" alt="">
-        </div>
-    </RouterLink>
+    <BackButton />
     <div class="mt-25 flex flex-col align-center justify-center text-center gap-8">
      
         <div>
@@ -29,23 +21,23 @@ const video = route.query.video as string
         <div class="bg-[#ffffff] sm:bg-[#ABABFE] w-[60%] h-[75vh] rounded-xl mx-auto shadow-inner mb-[30px]">
             <video  v-if="video !== undefined"   autoplay muted loop  playsinline  class="w-full h-full  rounded-xl">
                 <source :src="video" type="video/mp4" />
-                Your browser does not support the video tag.
+                {{ $t('project_view.video_unsupported') }}
             </video>
         </div>
 
         <div class="flex flex-col justify-center md:flex-row md:justify-between w-3/5 mx-auto mb-8 gap-4">
-            <h2 class="text-2xl font-semibold text-left md:w-1/3 w-full">BRIEF</h2>
-            <p class="text-left md:w-2/3 w-full max-w-xl">{{ brief }}</p>
+            <h2 class="text-2xl font-semibold text-left md:w-1/3 w-full">{{ $t('project_view.brief') }}</h2>
+            <p class="text-left md:w-2/3 w-full max-w-xl">{{ $t(`projects.${id}.brief`) }}</p>
         </div>
 
         <div class="flex flex-col justify-center md:flex-row md:justify-between w-3/5 mx-auto mb-8 gap-4">
-            <h2 class="text-2xl font-semibold text-left md:w-1/3 w-full">MA CONTRIBUTION</h2>
-            <p class="text-left md:w-2/3 w-full max-w-xl">{{ contribution }}</p>
+            <h2 class="text-2xl font-semibold text-left md:w-1/3 w-full">{{ $t('project_view.contribution') }}</h2>
+            <p class="text-left md:w-2/3 w-full max-w-xl">{{ $t(`projects.${id}.contrib`) }}</p>
         </div>
 
         <div class="flex flex-col justify-center md:flex-row md:justify-between w-3/5 mx-auto mb-8 gap-4">
-            <h2 class="text-2xl font-semibold text-left md:w-1/3 w-full">PROBLEMES</h2>
-            <p class="text-left md:w-2/3 w-full max-w-xl">{{ probleme }}</p>
+            <h2 class="text-2xl font-semibold text-left md:w-1/3 w-full">{{ $t('project_view.problems') }}</h2>
+            <p class="text-left md:w-2/3 w-full max-w-xl">{{ $t(`projects.${id}.prob`) }}</p>
         </div>
 </div>
     

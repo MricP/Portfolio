@@ -1,16 +1,19 @@
 <script setup lang="ts">
   import Footer from './components/Footer.vue';
+  import NavBar from './components/NavBar.vue';
+  import LanguageSwitcher from './components/LanguageSwitcher.vue';
   import { computed } from 'vue';
   import { useRoute } from 'vue-router'
 
   const route = useRoute()
-  const isHome =computed(() => route.params.name === 'home')
+  const isHome = computed(() => route.name === 'Home')
 
 </script>
 
 <template>
   <div class="font-fam overflow-x-hidden" >
-    <NavBar class="absolute top-15 left-15" v-show="isHome"/>
+    <LanguageSwitcher />
+    <NavBar v-show="isHome"></NavBar>
     <RouterView />
     <Footer />
   </div>

@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'node:url'
+// Unused URL imports removed
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'

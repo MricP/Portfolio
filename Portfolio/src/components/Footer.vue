@@ -10,6 +10,6 @@
                    
                 </a>
             </div>
-            <p class="text-center">© 2025 by Emric Pirrera</p>
+            <p class="text-center">© 2026 by Emric Pirrera</p>
     </div>
 </template>
