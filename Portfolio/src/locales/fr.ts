@@ -56,7 +56,7 @@ export default {
     skill_assoc: "Compétences associées",
     proofs: "Traces et Preuves",
     bilan_title: "Bilan de l'Alternance",
-    bilan_desc: "\" [Ici, vous pouvez résumer votre expérience globale en alternance. Mettez en avant ce que cela vous a apporté humainement (intégration, travail en équipe), techniquement (montée en compétence, autonomie), et l'évolution par rapport à votre stage précédent. Ce paragraphe sert de conclusion forte pour votre portfolio.] \"",
+    bilan_desc: "\" Bientôt disponible \"",
     m1_title: "Implémentation d'un composant Diagmag (Norme NF525)",
     m1_desc: "Ma mission principale a consisté à concevoir et développer un nouveau composant pour le logiciel Diagmag, en m'assurant de sa stricte conformité avec la norme française NF525 (règles de certification pour les logiciels de caisse). Cela a impliqué une analyse approfondie du cahier des charges, l'implémentation de processus sécurisés et immuables, ainsi qu'une phase de tests rigoureuse pour valider la conformité légale de la solution.",
     skills: {
