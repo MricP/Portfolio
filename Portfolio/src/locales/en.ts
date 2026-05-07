@@ -57,7 +57,7 @@ export default {
     proofs: "Traces and Proofs",
     bilan_title: "Apprenticeship Review",
     bilan_desc: "\" Coming soon \"",
-    m1_title: "Implementation of a Diagmag component (NF525 Standard)",
+    m1_title: "Implementation of a component (NF525 Standard)",
     m1_desc: "My main mission was to design and develop a new component for the Diagmag software, ensuring strict compliance with the French NF525 standard (certification rules for point-of-sale software). This involved an in-depth analysis of the specifications, the implementation of secure and immutable processes, as well as a rigorous testing phase to validate the legal compliance of the solution.",
     skills: {
       s1: "Design, develop and test a complex application",

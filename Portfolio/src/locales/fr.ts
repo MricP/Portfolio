@@ -57,7 +57,7 @@ export default {
     proofs: "Traces et Preuves",
     bilan_title: "Bilan de l'Alternance",
     bilan_desc: "\" Bientôt disponible \"",
-    m1_title: "Implémentation d'un composant Diagmag (Norme NF525)",
+    m1_title: "Implémentation d'un composant (Norme NF525)",
     m1_desc: "Ma mission principale a consisté à concevoir et développer un nouveau composant pour le logiciel Diagmag, en m'assurant de sa stricte conformité avec la norme française NF525 (règles de certification pour les logiciels de caisse). Cela a impliqué une analyse approfondie du cahier des charges, l'implémentation de processus sécurisés et immuables, ainsi qu'une phase de tests rigoureuse pour valider la conformité légale de la solution.",
     skills: {
       s1: "Concevoir, développer et tester une application complexe",
