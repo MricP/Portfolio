@@ -7,7 +7,7 @@ export default {
   },
   home: {
     subtitle: "Software Developer",
-    quote: "Everything you can imagine is probably doable, you just have to imagine it and work on it. (Larry Page)",
+    quote: "Anything you can imagine probably is doable, you just have to imagine it and work on it. (Larry Page)",
     contact: "Contact",
     cv: "Learn more",
     projects_title: "PROJECTS",
