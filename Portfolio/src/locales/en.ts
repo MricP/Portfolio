@@ -54,11 +54,17 @@ export default {
     tag_date: "Sept 2025 - Aug 2026",
     missions_title: "Major Missions & Projects",
     skill_assoc: "Associated skills",
-    proofs: "Traces and Proofs",
+    proofs_title: "Traces and Proofs",
     bilan_title: "Apprenticeship Review",
-    bilan_desc: "\" Coming soon \"",
-    m1_title: "Implementation of a component (NF525 Standard)",
-    m1_desc: "My main mission was to design and develop a new component for the Diagmag software, ensuring strict compliance with the French NF525 standard (certification rules for point-of-sale software). This involved an in-depth analysis of the specifications, the implementation of secure and immutable processes, as well as a rigorous testing phase to validate the legal compliance of the solution.",
+    bilan_desc: "A year of complete immersion at the heart of enterprise management software development, combining technical rigor, regulatory compliance, and innovation.",
+    m1_title: "Mission 1: POS Software Evolution (Diagmag) & NF525 Compliance",
+    m1_desc: "Design and development of advanced features for the point-of-sale software, while ensuring strict compliance with the French NF525 standard (securing, signing transaction data, ensuring traceability and inalterability). Worked on the authentication system, cash drawer initialization, daily closure, credit notes/refunds, ticket lists, and customer loyalty program.",
+    m2_title: "Mission 2: ERP Modernization & Development",
+    m2_desc: "Optimization and expansion of the ERP business management platform. Developed custom modules for order tracking, product catalog list management, invoicing, and creation of advanced promotional campaigns (promotional items and custom discount rules).",
+    m3_title: "Mission 3: Mobile Inventory Application & Synchronization",
+    m3_desc: "Design and development of an offline-first mobile inventory app to facilitate barcode scanning and stock validation in warehouses. Built a robust bidirectional synchronization mechanism to keep data consistent between mobile terminals and the central HFSQL database.",
+    m4_title: "Mission 4: Mastery of the WinDev & HFSQL Ecosystem",
+    m4_desc: "Modeling, administration, and optimization of HFSQL relational databases. Wrote complex, high-performance SQL queries for operational reporting, and created custom print templates and reports using the WinDev IDE.",
     skills: {
       s1: "Design, develop and test a complex application",
       s2: "Improve application performance and quality",
@@ -68,12 +74,59 @@ export default {
       l2: "Level 2",
       l3: "Level 3"
     },
-    proofs_labels: {
-      github: "Link to Git repository",
-      web: "Completed web page",
-      img: "Screenshot (Coming soon)",
-      arch: "Architecture diagram",
-      src: "Source code of the solution"
+    proofs: {
+      caisse: "Main POS/Cash Register Interface (Diagmag)",
+      caisse_connexion: "Secure Login Screen for POS",
+      caisse_fond: "Cash Drawer Float Management Screen",
+      caisse_cloture: "POS Daily Closure Window",
+      caisse_avoir: "Credit Notes and Refunds POS Interface",
+      caisse_tickets: "Registered POS Ticket List",
+      caisse_commandes: "Sales Orders and Payments Tracking",
+      caisse_fidelite: "Customer Loyalty Management Module",
+      erp_dashboard: "ERP Main Dashboard Overview",
+      erp_produits: "ERP Product Catalog and List",
+      erp_commande: "ERP Purchase Order Creation Screen",
+      erp_tickets: "ERP Historic Sales Ticket List",
+      erp_promo: "Promotions Configuration Panel",
+      erp_promo_art: "Promotional Articles Eligibility Setup",
+      mobile_inventaire: "Mobile Inventory App (Home Screen)",
+      mobile_saisie: "Direct Inventory Item Input Interface",
+      schema_sync: "Bidirectional Sync Architecture Diagram",
+      windev_ide: "WinDev IDE Development Environment",
+      hfsql_control: "HFSQL Control Center Database Tool",
+      windev_query: "WinDev Built-in SQL Query Editor",
+      windev_report: "Custom Print Layout Design Editor",
+      ticket_layout: "POS Receipt Layout Design and Mockup"
+    },
+    bilan: {
+      tech_title: "Technical Skills & Development",
+      tech: {
+        item1: "Deep mastery of the WinDev / WLanguage ecosystem and HFSQL databases.",
+        item2: "Design of offline-first mobile solutions with bidirectional data sync.",
+        item3: "Implementation of strict regulatory standards (NF525 POS Certification).",
+        item4: "Creation of ergonomic user interfaces and automated reporting tools (WinDev Reports)."
+      },
+      meth_title: "Methodology & Quality Assurance",
+      meth: {
+        item1: "Integration into an agile workflow with extensive regression testing.",
+        item2: "Collaboration using professional version control and issue tracking tools.",
+        item3: "Writing technical specifications and comprehensive developer guides.",
+        item4: "Optimization of SQL queries and regular refactoring of legacy codebases."
+      },
+      prof_title: "Professional & Personal Growth",
+      prof: {
+        item1: "Developed high autonomy on national-scale enterprise projects.",
+        item2: "Strengthened team collaboration and inter-departmental communications.",
+        item3: "Gained deep understanding of user needs in POS and ERP environments.",
+        item4: "Increased rigor and stress management during compliance and audit reviews."
+      },
+      evol_title: "Summary & Career Outlook",
+      evol: {
+        item1: "Successful transition from a student status to an autonomous developer.",
+        item2: "Validated core BUT Informatique skills in a real industrial workspace.",
+        item3: "Made significant contributions to the modernization of Groupe Diagram products.",
+        item4: "Confirmed strong career interest in database design and software architecture."
+      }
     }
   },
   stage: {

@@ -54,11 +54,17 @@ export default {
     tag_alt: "Développeur Logiciel",
     missions_title: "Grandes Missions & Projets",
     skill_assoc: "Compétences associées",
-    proofs: "Traces et Preuves",
+    proofs_title: "Traces et Preuves",
     bilan_title: "Bilan de l'Alternance",
-    bilan_desc: "\" Bientôt disponible \"",
-    m1_title: "Implémentation d'un composant (Norme NF525)",
-    m1_desc: "Ma mission principale a consisté à concevoir et développer un nouveau composant pour le logiciel Diagmag, en m'assurant de sa stricte conformité avec la norme française NF525 (règles de certification pour les logiciels de caisse). Cela a impliqué une analyse approfondie du cahier des charges, l'implémentation de processus sécurisés et immuables, ainsi qu'une phase de tests rigoureuse pour valider la conformité légale de la solution.",
+    bilan_desc: "Une année d'immersion complète au cœur du développement de solutions de gestion d'entreprise, alliant rigueur technique, conformité réglementaire et innovation.",
+    m1_title: "Mission 1 : Évolution du Logiciel de Caisse (Diagmag) & Conformité NF525",
+    m1_desc: "Conception et développement de fonctionnalités avancées pour le logiciel de caisse, tout en assurant la stricte conformité réglementaire avec la législation française NF525 (sécurisation, signature des données de caisse, traçabilité et inaltérabilité des transactions). Travail sur les modules de connexion sécurisée, la gestion du fond de caisse, la clôture journalière de la caisse, le processus d'avoirs et remboursements, la gestion des tickets et le système de fidélisation.",
+    m2_title: "Mission 2 : Modernisation & Développement de l'ERP",
+    m2_desc: "Optimisation et enrichissement de la plateforme ERP de gestion d'entreprise. Développement de modules complets pour le suivi des commandes clients, la gestion du catalogue produits, la facturation ainsi que la création et le paramétrage de campagnes de promotions (gestion des articles remisés et règles de calcul).",
+    m3_title: "Mission 3 : Application Mobile d'Inventaire & Synchronisation",
+    m3_desc: "Conception et développement d'une application mobile d'inventaire déconnectée (offline-first) pour faciliter la saisie et le contrôle des stocks en entrepôt. Mise en place d'un mécanisme de synchronisation bidirectionnel robuste pour assurer l'échange de données cohérent entre les terminaux mobiles et la base de données HFSQL centrale.",
+    m4_title: "Mission 4 : Maîtrise de l'Écosystème WinDev & HFSQL",
+    m4_desc: "Modélisation, administration et maintenance d'architectures de bases de données relationnelles HFSQL. Écriture de requêtes SQL complexes et optimisées pour les besoins métiers de l'entreprise, et conception d'états d'impression et rapports personnalisés via l'AGL WinDev.",
     skills: {
       s1: "Concevoir, développer et tester une application complexe",
       s2: "Améliorer les performances et la qualité de l'application",
@@ -68,12 +74,59 @@ export default {
       l2: "Niveau 2",
       l3: "Niveau 3"
     },
-    proofs_labels: {
-      github: "Lien vers le dépôt Git",
-      web: "Page web réalisée",
-      img: "Capture d'écran (Bientôt disponible)",
-      arch: "Schéma d'architecture",
-      src: "Code source de la solution"
+    proofs: {
+      caisse: "Interface Principale de la Caisse (Diagmag)",
+      caisse_connexion: "Système de Connexion Sécurisée de la Caisse",
+      caisse_fond: "Interface de Gestion du Fond de Caisse",
+      caisse_cloture: "Fenêtre de Clôture Journalière de Caisse",
+      caisse_avoir: "Création d'Avoirs et Remboursements en Caisse",
+      caisse_tickets: "Liste des Tickets de Caisse Enregistrés",
+      caisse_commandes: "Suivi des Commandes et Encaissements",
+      caisse_fidelite: "Système de Gestion de la Fidélité Client",
+      erp_dashboard: "Tableau de Bord Principal de l'ERP",
+      erp_produits: "Catalogue et Liste des Produits de l'ERP",
+      erp_commande: "Écran de Création de Commandes dans l'ERP",
+      erp_tickets: "Historique et Liste des Tickets de Vente de l'ERP",
+      erp_promo: "Interface de Configuration des Promotions",
+      erp_promo_art: "Gestion des Articles Éligibles aux Promotions",
+      mobile_inventaire: "Application Mobile d'Inventaire (Accueil)",
+      mobile_saisie: "Interface de Saisie Directe de l'Inventaire",
+      schema_sync: "Schéma d'Architecture de la Synchronisation Bidirectionnelle",
+      windev_ide: "Environnement de Développement WinDev (AGL)",
+      hfsql_control: "Centre de Contrôle HFSQL (Gestion des Bases)",
+      windev_query: "Éditeur de Requêtes SQL WinDev",
+      windev_report: "Concepteur d'États et Rapports Personnalisés",
+      ticket_layout: "Modélisation et Mise en Page du Ticket de Caisse"
+    },
+    bilan: {
+      tech_title: "Apports Techniques & Développement",
+      tech: {
+        item1: "Maîtrise de l'écosystème WinDev / WLanguage et des bases HFSQL.",
+        item2: "Conception d'applications mobiles déconnectées avec synchro bidirectionnelle.",
+        item3: "Implémentation de normes de certification strictes (NF525 Logiciels de Caisse).",
+        item4: "Création d'interfaces ergonomiques et d'outils de reporting automatisés (WinDev États)."
+      },
+      meth_title: "Méthodologie & Qualité Logicielle",
+      meth: {
+        item1: "Intégration d'un cycle de développement agile avec de nombreux tests.",
+        item2: "Collaboration via des outils professionnels de versioning et de tickets.",
+        item3: "Rédaction de spécifications techniques et de documentations.",
+        item4: "Optimisation de requêtes SQL et refactoring régulier de code existant."
+      },
+      prof_title: "Bilan Professionnel & Humain",
+      prof: {
+        item1: "Développement d'une grande autonomie sur des projets d'envergure nationale.",
+        item2: "Renforcement de l'esprit d'équipe et de la communication inter-services.",
+        item3: "Compréhension fine des besoins utilisateurs (secteurs caisse & ERP).",
+        item4: "Rigueur accrue et gestion du stress face aux audits réglementaires."
+      },
+      evol_title: "Synthèse & Évolution",
+      evol: {
+        item1: "Transition réussie du statut d'étudiant à celui de collaborateur technique autonome.",
+        item2: "Validation des compétences BUT Informatique dans un cadre industriel réel.",
+        item3: "Contribution significative à la modernisation des solutions de l'entreprise.",
+        item4: "Confirmation d'un intérêt pour l'architecture et la conception de bases de données."
+      }
     }
   },
   stage: {
